@@ -50,3 +50,15 @@ body{
   border-radius: 30% 30% 0 0; /* 较平的弧度 */
   box-sizing: border-box;
 }
+
+.cute{
+  cursor: pointer;
+}
+.cute:active{
+  transition: .2s;
+  transform: scale(.8);
+}
+.cute-9:active{
+  transition: .2s;
+  transform: scale(.9);
+}

@@ -8,7 +8,7 @@ export default function Body({children}) {
       <div className="mb-40">
       </div>
 
-      <div className="bg-base-200" >
+      <div className="bg-base-200 bg-opacity-80" >
         <div className="container mx-auto flex flex-col">
           <Footer/>
         </div>

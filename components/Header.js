@@ -5,6 +5,12 @@ export default function Header() {
         <a className="block h-10 overflow-hidden" href="/">
             <img src="Netflex-ZH.png" className="h-full w-full"/>
         </a>
+        <div className="flex-1 flex w-full items-center justify-end">
+            <ul className="menu menu-horizontal px-1">
+                <li><a href="/">首页</a></li>
+                <li><a href="/concat">帮助</a></li>
+            </ul>
+        </div>
     </div>
   );
 }
