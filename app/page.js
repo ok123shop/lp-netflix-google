@@ -1,101 +1,132 @@
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const vips = [
+    {id:1,title: "入门款",price:"8.8",unit:"元",day:30,dayLabel:'月',icon:"lv1.png"},
+    {id:2,title: "标准版",price:"20",unit:"元",day:30,dayLabel:'月',icon:"lv2.png"},
+    {id:3,title: "全球版",price:"25",unit:"元",day:30,dayLabel:'月',icon:"lv3.png",hot:1},
+  ]
+
+  const plans = [
+      {
+          id: 1,title:"入门款",icon:"lv1.png",
+          content: "适合新手体验",
+          price: "8.8元",
+          planClassName: 'plana',
+          spuId:4,
+          stockId:2,
+          tip:"推荐台湾、新加坡、日本、美国、澳洲观影",
+          tags:[
+            {type:'ok',label:"4K + HDR"},
+            {type:'ok',label:"杜比音效"},
+            {type:'ok',label:"全设备"},
+            {type:'error',label:"独立车位"},
+            {type:'error',label:"全区解锁"},
+          ],
+          skuList: [
+            {}
+          ]
+      },
+      {
+          id: 2,title:"标准版",icon:"lv2.png",
+          spuId:4,
+          stockId:1,
+          content: "部分地区有限制",
+          planClassName: 'planb',
+          price: "20元",
+          tip:"推荐台湾、新加坡、日本、美国、澳洲观影",
+          tags:[
+            {type:'ok',label:"4K + HDR"},
+            {type:'ok',label:"杜比音效"},
+            {type:'ok',label:"全设备"},
+            {type:'ok',label:"独立车位"},
+            {type:'error',label:"全区解锁"},
+
+          ],
+      },
+      {
+          id: 3,title:"全球版",icon:"lv3.png",
+          content: "全球可用，无限制",
+          spuId:4,
+          stockId:3,
+          planClassName: 'planc',
+          price: "25元",
+          tags:[
+            {type:'ok',label:"4K + HDR"},
+            {type:'ok',label:"杜比音效"},
+            {type:'ok',label:"全设备"},
+            {type:'ok',label:"独立车位"},
+            {type:'ok',label:"全区解锁"},
+
+          ],
+      }
+  ]
+
+  return (
+    <div className="pt-10 lg:pt-20 flex flex-col items-center w-full h-full overflow-hidden overflow-y-auto">
+      <img className="w-20 h-20 md:w-24 md:h-24 lg:w-40 lg:h-40" src="base.png"/>
+      <img className="w-40 md:w-48 lg:w-60" src="Netflex-ZH-2.png"/>
+      <p className="text-md md:text-2xl ">为您打造高性价比、稳定、省心的流媒体账号合租</p>
+      <ul className="menu menu-horizontal bg-base-200 rounded-box flex-nowrap items-center my-6 ">
+        {
+          vips.map(item => (
+            <li key={item.title} className="relative">
+            <a className=" flex items-center" href={`#${item.id}`}>
+              <img src={item.icon} className="h-4"/>
+              <span className="text-sm">
+                {item.title}<span className="text-white px-1 hidden md:inline-block">{item.price}</span>
+                <span className="hidden md:inline-block">{item.unit}/{item.dayLabel}</span>
+              </span>
+              {
+                item.hot ? 
+                (<img src="hot.png" className="h-4 absolute right-0 -top-1"/>)
+                :
+                null
+              }
+            </a>
+          </li>
+          ))
+        }
+      </ul>
+      <div className="curved-line my-2 mb-0" />
+      <div class="container mx-auto px-4 text-center ">
+        
+        <div className="text-left mt-10 w-full max-w-3xl mx-auto">
+          {
+            plans.map(plan => (
+              <div key={plan.id} id={plan.id} className=" mb-10">
+                <div className="p-4 bg-black bg-opacity-60 rounded-t-2xl">
+                  <div className="flex items-center gap-2  ">
+                    <img src={plan.icon} className="w-6 "/>
+                    <span className="text-xl md:text-xl  text-white font-bold ">{plan.title}</span>
+                    <h3 className="text-sm md:text-md mb-2 flex-1 text-right">{plan.content}</h3>
+                  </div>
+                  <div className="flex items-center gap-2 mt-2 flex-wrap ">
+                  
+                    {
+                      plan.tags.map((tag) => (
+                        <div key={tag.label} className={`badge ${tag.type === 'ok' ? 'badge-warning ' : ''} badge-lg`}>
+                          <img src={tag.type === 'ok' ? 'gougou.png' : 'chacha.png'} className="w-4 h-4"/>
+                          <span className="pl-2">{tag.label}</span>
+                        </div>
+                      ))
+                    }
+                  </div>
+                  <p className="mt-2 text-gray-400 text-sm md:text-md">{plan.tip}</p>
+                </div>
+                <div className="p-4 bg-zinc-900 bg-opacity-80">
+                  123
+                </div>
+
+                
+
+              </div>
+            ))
+          }
+
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
