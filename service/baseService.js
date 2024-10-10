@@ -1,5 +1,5 @@
 // const host = "http://localhost:8782/users"
-const host = "http://120.79.207.175:8782/users"
+const host = "https://api2.okblink.xyz/users"
 const 
     createQuery = (params) => {
         if(!params){
