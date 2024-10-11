@@ -150,7 +150,6 @@ function payJump(channel,data){
 }
 
 useEffect(() => {
-  baseService.test();
   setAccount(window.localStorage.getItem("USERNAME"))
 },[])
 
