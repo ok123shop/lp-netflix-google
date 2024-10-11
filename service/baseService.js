@@ -1,9 +1,5 @@
-// const host = "http://localhost:8782/users"
-const host = "https://ok123.shop/users"
-// const host = "https://8782.lqproxy.com/users"
-// const host = "https://super-mud-05b6.lq545209147.workers.dev/users"
-// const host = "http://8782.proxy.ok123.shop/users"
-// const host = "https://metshop.vip/users"
+const host = "/api/users"
+
 const 
     createQuery = (params) => {
         if(!params){

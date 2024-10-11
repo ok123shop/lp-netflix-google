@@ -13,12 +13,12 @@ export default function Home({searchParams}) {
   const plans = [
       {
           id: 1,title:"入门款",icon:"lv1.png",
-          content: "适合新手体验",
+          content: "推荐新手体验",
           price: "8.8元",
           planClassName: 'plana',
           spuId:4,
           stockId:2,
-          tip:"推荐台湾、新加坡、日本、美国、澳洲观影",
+          tip:"推荐台湾、新加坡、日本、美国、澳洲等观影",
           tags:[
             {type:'ok',label:"4K + HDR"},
             {type:'ok',label:"杜比音效"},
@@ -40,7 +40,7 @@ export default function Home({searchParams}) {
           content: "部分地区有限制",
           planClassName: 'planb',
           price: "20元",
-          tip:"推荐台湾、新加坡、日本、美国、澳洲观影",
+          tip:"推荐台湾、新加坡、日本、美国、澳洲等观影",
           tags:[
             {type:'ok',label:"4K + HDR"},
             {type:'ok',label:"杜比音效"},
@@ -263,7 +263,7 @@ useEffect(() => {
         </div>
       </div>
 
-      <div className="mt-20 flex flex-col gap-2 justify-center items-center">
+      <div className="mt-20 flex flex-col gap-2 justify-center items-center px-4">
         <div className="divider divider-error">温馨提示</div>
         <h1 className="text-lg md:text-2xl ">您购买过程中遇到任何问题，都可以与我们取得联系</h1>
         <a className="btn w-40 btn-warning " href="/concat">
