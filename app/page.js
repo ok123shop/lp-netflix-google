@@ -150,6 +150,7 @@ function payJump(channel,data){
 }
 
 useEffect(() => {
+  baseService.test();
   setAccount(window.localStorage.getItem("USERNAME"))
 },[])
 
@@ -213,7 +214,7 @@ useEffect(() => {
                           key={item.id} 
                           className={`
                             cursor-pointer cute-9 relative w-full flex  flex-col justify-center items-center rounded-lg bg-gray-700 bg-opacity-60 py-2 md:py-4
-                            ${actSku.id === item.id ? 'bg-error bg-opacity-90 text-gray-100' : null}
+                            ${actSku.id === item.id ? '!bg-error bg-opacity-90 text-gray-100' : null}
                           `}
                           onClick={(e) => selectedSkuHandler(plan,item)}
                         >
