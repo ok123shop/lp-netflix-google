@@ -1,4 +1,4 @@
-const host = "/api/users"
+const host = "/users"
 
 const 
     createQuery = (params) => {
