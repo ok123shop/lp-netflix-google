@@ -1,3 +1,5 @@
+git pull
+
 docker stop lp-netflix-google
 docker rm lp-netflix-google
 docker rmi lp-netflix-google/ok123
