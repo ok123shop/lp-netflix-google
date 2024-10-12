@@ -12,7 +12,7 @@ export default function Home({searchParams}) {
 
   const plans = [
       {
-          id: 1,title:"入门款",icon:"lv1.png",
+          id: 1,title:"奈飞-入门款",icon:"lv1.png",
           content: "推荐新手体验",
           price: "8.8元",
           planClassName: 'plana',
@@ -34,7 +34,7 @@ export default function Home({searchParams}) {
           ]
       },
       {
-          id: 2,title:"标准版",icon:"lv2.png",
+          id: 2,title:"奈飞-标准版",icon:"lv2.png",
           spuId:4,
           stockId:1,
           content: "部分地区有限制",
@@ -57,7 +57,7 @@ export default function Home({searchParams}) {
           ]
       },
       {
-          id: 3,title:"全球版",icon:"lv3.png",
+          id: 3,title:"奈飞-全球版",icon:"lv3.png",
           content: "全球可用，无限制",
           spuId:4,
           stockId:3,
@@ -155,9 +155,8 @@ useEffect(() => {
 
   return (
     <div className="pt-10 lg:pt-20 flex flex-col items-center w-full">
-      <img className="w-20 h-20 md:w-24 md:h-24 lg:w-40 lg:h-40" src="base.png"/>
-      <img className="w-40 md:w-48 lg:w-60" src="Netflex-ZH-2.png"/>
-      <p className="text-md md:text-2xl ">为您打造高性价比、稳定、省心的流媒体账号合租</p>
+      <img className="w-40 md:w-48 lg:w-60" src="logo-simp.png"/>
+      <p className="text-md md:text-2xl ">为您打造稳定、高性价比、省心的流媒体账号合租</p>
       <ul className="menu menu-horizontal bg-base-200 rounded-box flex-nowrap items-center my-6 ">
         {
           vips.map(item => (

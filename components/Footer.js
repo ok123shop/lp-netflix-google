@@ -4,11 +4,11 @@ export default function Footer() {
     <footer className="footer text-base-content p-10">
 
       <aside>
-        <img src="Netflex-ZH.png" className="w-40 md:w-60 -translate-x-4 md:-translate-x-5"/>
+        <img src="Logo.png" className="w-40 md:w-60 "/>
         <p>
           亲历打造国内省心的合租平台
           <br />
-          奈飞中文站 since 1992
+          环球流媒体 since 2002 - 2024
         </p>
       </aside>
       <nav>
