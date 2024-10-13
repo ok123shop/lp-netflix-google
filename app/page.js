@@ -12,7 +12,7 @@ export default function Home({searchParams}) {
 
   const plans = [
       {
-          id: 1,title:"奈飞-入门款",icon:"lv1.png",
+          id: 1,title:"奈妃-入门款",icon:"lv1.png",
           content: "推荐新手体验",
           price: "8.8元",
           planClassName: 'plana',
@@ -34,7 +34,7 @@ export default function Home({searchParams}) {
           ]
       },
       {
-          id: 2,title:"奈飞-标准版",icon:"lv2.png",
+          id: 2,title:"奈妃-标准版",icon:"lv2.png",
           spuId:4,
           stockId:1,
           content: "部分地区有限制",
@@ -57,7 +57,7 @@ export default function Home({searchParams}) {
           ]
       },
       {
-          id: 3,title:"奈飞-全球版",icon:"lv3.png",
+          id: 3,title:"奈妃-全球版",icon:"lv3.png",
           content: "全球可用，无限制",
           spuId:4,
           stockId:3,
@@ -274,7 +274,7 @@ useEffect(() => {
 
       <dialog id="my_modal_1" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg">最后一步，即将获得奈飞4K账号</h3>
+          <h3 className="font-bold text-lg">最后一步，即将获得奈妃4K账号</h3>
           <p className="py-4 text-sm">付款后账号信息将会通过短信、邮件的形式发放给您</p>
           <input type="text" placeholder="手机 / 邮箱" className={`input input-bordered w-full ${loading ? 'disabled' : null}`} 
             readOnly={loading}

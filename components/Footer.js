@@ -13,7 +13,7 @@ export default function Footer() {
       </aside>
       <nav>
         <h6 className="footer-title">服务</h6>
-        <a className="link link-hover">奈飞合租</a>
+        <a className="link link-hover">奈妃合租</a>
         <a className="link link-hover">迪士尼合租</a>
         <a className="link link-hover">HBO合租</a>
         <a className="link link-hover">ChatGPT合租</a>
